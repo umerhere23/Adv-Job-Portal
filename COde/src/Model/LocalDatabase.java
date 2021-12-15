@@ -27,6 +27,10 @@ public class LocalDatabase {
         passwords.add("12345");
 
     }
+    private static final ArrayList<String> skils= new ArrayList<>();{
+    skils.add("Developer");
+    skils.add("Web developer");
+}
 
     public static boolean validate(final String username, final String pass) {
         for (int i = 0; i < username_ids.size(); i++) {
@@ -36,4 +40,8 @@ public class LocalDatabase {
         }
         return false;
         
-    }}
+    }
+public static boolean Add(final String skill){
+    skils.add(skill);
+    return true;
+}}
