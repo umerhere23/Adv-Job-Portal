@@ -178,10 +178,11 @@
             <Component class="javax.swing.JComboBox" name="comboskill">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="3">
-                    <StringItem index="0" value="Photograper"/>
-                    <StringItem index="1" value="software Developer"/>
-                    <StringItem index="2" value="Web Designer"/>
+                  <StringArray count="4">
+                    <StringItem index="0" value="Select"/>
+                    <StringItem index="1" value="Photograper"/>
+                    <StringItem index="2" value="software Developer"/>
+                    <StringItem index="3" value="Web Designer"/>
                   </StringArray>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">

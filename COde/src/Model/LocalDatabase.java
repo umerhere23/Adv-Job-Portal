@@ -6,6 +6,7 @@ package Model;
 
 import Domain.NewMain;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -29,9 +30,7 @@ public class LocalDatabase extends NewMain {
 
     }
     public static final ArrayList<String> skils= new ArrayList<>();{
-    skils.add("Photograper");
-skils.add("software Developer");
-skils.add("Web Designer");
+ 
 }
 
     public static boolean validate(final String username, final String pass) {
@@ -48,7 +47,11 @@ public static boolean Add(final String skill){
     skils.add(skill);
     return true;
 }
-public static boolean Validate(String skill){
+public static final ArrayList<String> User= new ArrayList<>();{
+
+ }   
+
+public static boolean Validate( final String skill){
      skils.add("Photograper");
 skils.add("software Developer");
 skils.add("Web Designer");
@@ -64,4 +67,10 @@ s=skils.size();
 return s;
 
 }
+public static boolean Save(String a,String b){
+     User.add(a);
+    User.add(b);
+    return true;
+}
+
 }

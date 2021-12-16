@@ -70,7 +70,7 @@ public class AddSkills extends javax.swing.JFrame {
                 .addGap(24, 24, 24))
         );
 
-        comboskill.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Photograper", "software Developer", "Web Designer" }));
+        comboskill.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Photograper", "software Developer", "Web Designer" }));
         comboskill.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Add Skills"));
         comboskill.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,23 +193,38 @@ public class AddSkills extends javax.swing.JFrame {
     private void addbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addbtnActionPerformed
         
 String skill=txtskill.getText();
-AddSkill.Addskill(skill);{
-        if(AddSkill.Validation(skill)||AddSkill.Validate(skill)){
-           JOptionPane.showMessageDialog(this, "Your Entry Is Empty Or Already Existing");
-        }
-      
-        else{
-comboskill.addItem(skill);
-JOptionPane.showMessageDialog(this, "Your Skill is Added in Box");
+
+ if(AddSkill.Validate(skill)){
+     txtskill.setText("");
+           JOptionPane.showMessageDialog(this, "Your Entry Is  Already Existing");
+          
+   }
+ else if (AddSkill.Validation(skill)){
+      JOptionPane.showMessageDialog(this, "Your Entry Is Empty ");
+   }
+
+ 
+       else{
+     AddSkill.Addskill(skill);
+         comboskill.addItem(skill);
+         txtskill.setText("");
+JOptionPane.showMessageDialog(this, "Your Skill is Added in Box"); 
+
     }
 
-
-        }
+        
 
     }//GEN-LAST:event_addbtnActionPerformed
     
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+String a=jComboBox2.getSelectedItem().toString(); 
+String b=comboskill.getSelectedItem().toString();
+if(AddSkill.Validateinfo(a, b)){
+    JOptionPane.showMessageDialog(this,"User doesn't Select Any Option");
+}
+else{
+AddSkill.Save(a, b);
+JOptionPane.showMessageDialog(this,"Your Selected Skill is "+b +"\n"+"Your level is "+a);}// TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

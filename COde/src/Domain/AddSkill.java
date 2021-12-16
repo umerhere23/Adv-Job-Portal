@@ -25,13 +25,26 @@ public class AddSkill extends AddSkills{
      else
         return false;
     }
- public static boolean Validate(String skill){
+ public static boolean Validate(final String skill){
      if(LocalDatabase.Validate(skill)){
          return true;
      }
      return false;
  }
+ public static boolean Save(final String a,final String b){
+     if(LocalDatabase.Save(a, b)){
+         return true;
+ }
+ return false;
 }
-       
+ public static boolean Validateinfo(String a,String b){
+     if(a.equals("Select")||b.equals("Select")){
+         return true;
+     }
+     else{
+         return false;
+     }
+ }
+}
     
 
