@@ -43,13 +43,17 @@ public class LocalDatabase  {
         
     }
 public static boolean Add(final String skill){
-   
+   int i=0;
     skils.add(skill);
+    i++;
     return true;
 }
-public static final ArrayList<String> User= new ArrayList<>();{
-
- }   
+public static final ArrayList<String> User= new ArrayList<>();
+static{
+    User.add( 0,"omerjh5004@gmail.com");
+   User.add(1,"Umer");
+}
+  
 
 public static boolean Validate( final String skill){
      skils.add("Photograper");
@@ -68,9 +72,14 @@ return s;
 
 }
 public static boolean Save(String a,String b){
+   User.add("Umer");
      User.add(a);
     User.add(b);
     return true;
 }
-
-}
+public static boolean addfeedback(String name,String fb){
+    
+    User.add(name);
+    User.add(fb);
+    return true;
+}}

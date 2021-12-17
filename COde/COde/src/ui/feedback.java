@@ -233,7 +233,7 @@ public class feedback extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BTNPROFESSIONALActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNPROFESSIONALActionPerformed
-       PROFESION s=new PROFESION();
+       Message s=new Message();
        s.setVisible(true);
 this.dispose();// TODO add your handling code here:
     }//GEN-LAST:event_BTNPROFESSIONALActionPerformed
@@ -245,13 +245,13 @@ this.dispose();      // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void uniqueskiilsjavaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uniqueskiilsjavaActionPerformed
-PROFESION s=new PROFESION();
+Message s=new Message();
 s.setVisible(true);
 this.dispose();// TODO add your handling code here:
     }//GEN-LAST:event_uniqueskiilsjavaActionPerformed
 
     private void skiilstoimproveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_skiilstoimproveActionPerformed
-        PROFESION s=new PROFESION();
+        Message s=new Message();
         s.setVisible(true);
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_skiilstoimproveActionPerformed
