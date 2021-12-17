@@ -11,10 +11,13 @@ Noor Ahmed                      Sp20-BSE-049
 
      *Muhammad Umer Mukhtiar(Sp20-Bse-055)*
 ->Fully Dressed UseCase(Add Skill) Pg # 19 to 22    
+->Code implemented
 
     *Usman Toufique(Sp20-Bse-046)*
 ->Fully Dressed Usecae(Genreate Code) Pg # 28 to 31
 ->Opreation Contract Pg # 44
+->Code implemented
 
    *Noor Ahmed(Sp20-Bse-055)*
--> UseCases Pg # 35,36,37
+-> UseCase(Feedback to Skill)Pg # 35 to 37
+->Code implemented
