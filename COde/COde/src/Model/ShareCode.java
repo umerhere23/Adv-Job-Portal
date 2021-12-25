@@ -12,7 +12,7 @@ public class ShareCode {
     String chars="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String code="";
         String array1[]= new String[5];
-    public String Random(){
+    public String GenerateCode(){
         Random ran= new Random();
         int length =5;
         char[] codes= new char[length];
@@ -28,5 +28,8 @@ public class ShareCode {
         
         return code;
     }
-    
+    public void UpdateCode(){
+        //Code saving into code table of user profile 
+    String sql=String.format("UPDATE User set Code=%s where Code=null",code);
+    }
 }

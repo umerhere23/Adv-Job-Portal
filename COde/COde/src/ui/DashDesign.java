@@ -652,7 +652,8 @@ this.dispose();// TODO add your handling code here:
 
     private void CodeBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CodeBtnMouseClicked
         ShareCode code= new ShareCode();
-        CodeDisp.setText(code.Random());
+        CodeDisp.setText(code.GenerateCode());
+        code.UpdateCode();
     }//GEN-LAST:event_CodeBtnMouseClicked
 
     private void lblskillsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblskillsMouseClicked
