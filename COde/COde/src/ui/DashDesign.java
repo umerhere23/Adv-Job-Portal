@@ -5,6 +5,9 @@ import Domain.AddSkill;
 import Model.ShareCode;
 import java.awt.Color;
 import java.awt.Component;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.awt.event.MouseListener;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -52,6 +55,7 @@ public class DashDesign extends javax.swing.JFrame {
         CodeBtn = new javax.swing.JLabel();
         CodeDisp = new javax.swing.JTextField();
         lblskills = new javax.swing.JLabel();
+        copybtn = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         lblVideo = new javax.swing.JLabel();
@@ -217,6 +221,13 @@ public class DashDesign extends javax.swing.JFrame {
             }
         });
 
+        copybtn.setText("Copy");
+        copybtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                copybtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PanelMenuLayout = new javax.swing.GroupLayout(PanelMenu);
         PanelMenu.setLayout(PanelMenuLayout);
         PanelMenuLayout.setHorizontalGroup(
@@ -235,7 +246,10 @@ public class DashDesign extends javax.swing.JFrame {
                             .addComponent(lblDocuments, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblOverview, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblSkills, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblskills, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(lblskills, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(PanelMenuLayout.createSequentialGroup()
+                        .addGap(98, 98, 98)
+                        .addComponent(copybtn)))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
         PanelMenuLayout.setVerticalGroup(
@@ -256,7 +270,8 @@ public class DashDesign extends javax.swing.JFrame {
                 .addComponent(CodeDisp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(CodeBtn)
-                .addGap(35, 35, 35))
+                .addGap(10, 10, 10)
+                .addComponent(copybtn))
         );
 
         jPanel4.setBackground(new java.awt.Color(204, 0, 51));
@@ -531,7 +546,7 @@ public class DashDesign extends javax.swing.JFrame {
                                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(26, 26, 26)
                                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, 854, Short.MAX_VALUE)
+                            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, 866, Short.MAX_VALUE)
                             .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -656,6 +671,12 @@ this.dispose();// TODO add your handling code here:
  // TODO add your handling code here:
     }//GEN-LAST:event_lblskillsMouseExited
 
+    private void copybtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_copybtnActionPerformed
+        StringSelection stringSelection = new StringSelection (CodeDisp.getText());
+Clipboard clpbrd = Toolkit.getDefaultToolkit ().getSystemClipboard ();
+clpbrd.setContents (stringSelection, null);
+    }//GEN-LAST:event_copybtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -695,6 +716,7 @@ this.dispose();// TODO add your handling code here:
     private javax.swing.JLabel CodeBtn;
     private javax.swing.JTextField CodeDisp;
     private javax.swing.JPanel PanelMenu;
+    private javax.swing.JButton copybtn;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
