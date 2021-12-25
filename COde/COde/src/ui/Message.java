@@ -5,6 +5,7 @@
 package ui;
 
 import Domain.getmsg;
+import Model.Database;
 import javax.swing.JOptionPane;
 import ui.feedback;
 
@@ -168,17 +169,19 @@ public class Message extends javax.swing.JFrame {
     }//GEN-LAST:event_feedbackActionPerformed
 
     private void SUBMITPROFESSIONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SUBMITPROFESSIONActionPerformed
-String name =nam.getText();
+String username =nam.getText();
 String fb= feedback.getText();
-if(name.equals("")&&fb.equals("")){
+if(username.equals("")&&fb.equals("")){
         JOptionPane.showMessageDialog(this,"Please fill form");
-        }
-else if(getmsg.addtodatabase(name,fb)){
+       
+}
+else {
+    Database.con(username,fb);
         JOptionPane.showMessageDialog(this,"Your Feedback is Saved");
         feedback s=new feedback();
   s.setVisible(true);
-this.dispose();
-    }
+this.dispose();}
+    
  // TODO add your handling code here:
     }//GEN-LAST:event_SUBMITPROFESSIONActionPerformed
 
